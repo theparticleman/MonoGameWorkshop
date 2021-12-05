@@ -436,3 +436,21 @@ protected override void Draw(GameTime gameTime)
 Now when you run your game, the platform should display and the player should be able to jump on top of it but not walk through it.
 
 ![Platform](images/platform.png)
+
+## What's Next?
+
+We've got some basic display, movement, and physics implemented. But this isn't really a full game yet. What should we do next?
+
+I'll leave that up to you. If you've gotten as far as you want to, congratulations! You're done! If you'd like to keep working, here are some ideas of things you could try:
+
+* There are probably lots of things about the code that we came up with that could be improved. Some examples could include removing the duplication in the positioning and drawing logic of the player and the platform, avoided the unnecessary recomputation of the platform location every time a frame is drawn, and finding a better way to position the player and platform. You could make the code look more like how you want it to look.
+* You could change the physics. All of the "magic numbers" for things like restitution, friction, gravity, and movement forces are just that, magic numbers. If you change them it will change how the game feels and behaves. Try playing with some of them to see if you can find a "feel" for the game that you like better. What happens if you remove the code that makes sure the player doesn't rotate?
+* There are other ways the physics could be improved. For example, it's possible for the player to "climb" up the walls on the sides of the screen if they keep moving in the direction of the wall and hold down the space bar.
+* You could add more platforms.
+* You could add enemies.
+* You could add something the player is trying to get (coins or something) and keep track of a score.
+* You could play with the physics of the platforms and make them move or rotate.
+* You could add sound to the game.
+* You could check out the [documentation for MonoGame](https://docs.monogame.net/).
+* You could check out the [documentation](https://tainicom.github.io/Aether.Physics2D/1.6/) or [GitHub](https://github.com/tainicom/Aether.Physics2D) page for Aether.Physics2D. The documentation leaves a lot to be desired, but package has a lot of cool functionality that might inspire you to make something cool.
+* You could check out the [documentation for MonoGame.Extended](https://www.monogameextended.net/docs/). It isn't very good either, but it also has a lot of potentially useful functionality (like particle systems, GUI tools, tweening, and animations to name a few).
