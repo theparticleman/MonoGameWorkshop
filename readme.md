@@ -1,10 +1,22 @@
+This is a guide to help you get started with MonoGame and Aether.Physics2D.
+
+## Prerequisites
+
+This guide was tested with both .NET 6 and .NET Core 3.1 installed, but the project templates target .NET Core 3.1. You'll either need .NET Core 3.1 installed, or you'll need to change the project file created to target .NET 6 instead of .NET Core 3.1.
+
+You'll need a way to edit code. I'd recommend Visual Studio Code, but any text/code editor should work.
+
+This guide definitely works on Windows. It should work on Mac and Linux, but some things might need to be tweaked.
+
+You can see the completed code [here](https://github.com/theparticleman/MonoGameWorkshop-Code).
+
 
 ## Getting Started
 
-1. Install the MonoGame templates. Run the command `dotnet new --install MonoGame.Templates.CSharp`.
-1. Install the MonoGame content tool. Run the command `dotnet tool install -g dotnet-mgcb-editor`.
-1. Register the MonoGame content tool. Run the command `mgcb-editor --register`. If the `mgcb-editor` command can't be found, it may be because the dotnet global tools directory isn't in your path. The mgcb-editor tool should get installed in the `~/.dotnet/tools` directory. You may need to run it using a fully qualified path.
-1. Create a new MonoGame project. Run the command `dotnet new mgdesktopgl -o PathWhereYouWantYourProjectToBeCreated`. Alternatively, you can manually create the directory where you want you project to go, then `cd` to that directory and run the command `dotnet new mgdesktopgl`.
+1. Install the MonoGame templates. Run the command `dotnet new --install MonoGame.Templates.CSharp`. This only needs to be done once.
+1. Install the MonoGame content tool. Run the command `dotnet tool install -g dotnet-mgcb-editor`. This only needs to be done once.
+1. Register the MonoGame content tool. Run the command `mgcb-editor --register`. This only needs to be done once. If the `mgcb-editor` command can't be found, it may be because the dotnet global tools directory isn't in your path. The mgcb-editor tool should get installed in the `~/.dotnet/tools` directory. You may need to run it using a fully qualified path.
+1. Create a new MonoGame project. Run the command `dotnet new mgdesktopgl -o PathWhereYouWantYourProjectToBeCreated`. Alternatively, you can manually create the directory where you want your project to go, then `cd` to that directory and run the command `dotnet new mgdesktopgl`.
 1. Add the Aether.Physics2D package to your project. When in the directory where your project is located, run the command `dotnet add package Aether.Physics2D.MG`.
 1. Add the MonoGame.Extended package to your project. When in the directory where your project is location, run the command `dotnet add package MonoGame.Extended`.
 1. Make sure your project compiles and runs. Run the command `dotnet run` when in your project directory. Your program should launch as a MonoGame window with a blue background.
@@ -446,11 +458,12 @@ I'll leave that up to you. If you've gotten as far as you want to, congratulatio
 * There are probably lots of things about the code that we came up with that could be improved. Some examples could include removing the duplication in the positioning and drawing logic of the player and the platform, avoided the unnecessary recomputation of the platform location every time a frame is drawn, and finding a better way to position the player and platform. You could make the code look more like how you want it to look.
 * You could change the physics. All of the "magic numbers" for things like restitution, friction, gravity, and movement forces are just that, magic numbers. If you change them it will change how the game feels and behaves. Try playing with some of them to see if you can find a "feel" for the game that you like better. What happens if you remove the code that makes sure the player doesn't rotate?
 * There are other ways the physics could be improved. For example, it's possible for the player to "climb" up the walls on the sides of the screen if they keep moving in the direction of the wall and hold down the space bar.
+* Make it so the game starts maximized. Or in full screen mode.
 * You could add more platforms.
 * You could add enemies.
 * You could add something the player is trying to get (coins or something) and keep track of a score.
 * You could play with the physics of the platforms and make them move or rotate.
 * You could add sound to the game.
-* You could check out the [documentation for MonoGame](https://docs.monogame.net/).
-* You could check out the [documentation](https://tainicom.github.io/Aether.Physics2D/1.6/) or [GitHub](https://github.com/tainicom/Aether.Physics2D) page for Aether.Physics2D. The documentation leaves a lot to be desired, but package has a lot of cool functionality that might inspire you to make something cool.
+* For many of these suggestions you'll need knowledge not covered in this guid. You could check out the [documentation for MonoGame](https://docs.monogame.net/) to learn more about it.
+* You could check out the [documentation](https://tainicom.github.io/Aether.Physics2D/1.6/) or [GitHub](https://github.com/tainicom/Aether.Physics2D) page for Aether.Physics2D. The documentation leaves a lot to be desired, but the package has a lot of cool functionality that might inspire you to make something amazing.
 * You could check out the [documentation for MonoGame.Extended](https://www.monogameextended.net/docs/). It isn't very good either, but it also has a lot of potentially useful functionality (like particle systems, GUI tools, tweening, and animations to name a few).
